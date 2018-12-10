@@ -150,7 +150,7 @@ def read_data_sets(train_dir, fake_data=False, one_hot=False, dtype=tf.float32):
   TRAIN_LABELS = 'train-labels-idx1-ubyte.gz'
   TEST_IMAGES = 't10k-images-idx3-ubyte.gz'
   TEST_LABELS = 't10k-labels-idx1-ubyte.gz'
-  VALIDATION_SIZE = 5000
+  VALIDATION_SIZE = 5000 # 自行从training set中切分出5000个作为validation set
   # 读取训练和测试数据
   local_file = maybe_download(TRAIN_IMAGES, train_dir)
   train_images = extract_images(local_file)
